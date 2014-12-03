@@ -29,16 +29,11 @@ Zorg uses a number of open source projects to work properly:
 
 ### Installation & Usage
 
-You need Grunt installed globally and locally:
-
-```sh
-$ npm install -g grunt
-```
+You need Grunt installed:
 
 ```sh
 $ git clone [git-repo-url] zorg
 $ cd zorg
-$ npm install grunt
 $ grunt
 ```
 
