@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Media query mixin
+   ========================================================================== */
+
+/**
+ * This mixin will allow for quick media query application of set breakpoints
+ *
+ * @example @include media-query(lap) { ...styles... }
+ */
+
+@mixin media-query($breakpoint) {
+	@each $point, $size in $breakpoints {
+		@if $breakpoint == $point {
+			@media screen and (min-width: $size) {
+				@content;
+			}
+		}
+	}
+}

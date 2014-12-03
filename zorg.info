@@ -1,0 +1,31 @@
+name = Zorg
+description = Custom theme starter.
+screenshot = screenshot.png
+core = 7.x
+engine = phptemplate
+
+regions[header] = Header
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+regions[hero] = Hero
+regions[highlighted] = Highlighted
+regions[sub_nav] = Sub nav
+regions[content] = Content
+regions[content_top] = Content top
+regions[content_bottom] = Content bottom
+regions[content_column_first] = Content column first
+regions[content_column_second] = Content column second
+regions[content_column_third] = Content column third
+regions[documentation_sidebar] = Documentation sidebar
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[promo] = Promo
+regions[footer] = Footer
+regions[footer_top] = Footer top
+
+stylesheets[all][] = css/style.css
+
+scripts[] = js/tables.stack.js
+scripts[] = js/scripts.js

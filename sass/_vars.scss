@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Sass variables
+   ========================================================================== */
+
+/**
+ * These variables will house common properties and values shared in the 
+ * Sass partials.
+ */
+
+
+/* Susy Global Variable
+   ========================================================================== */
+$susy: (
+  columns: 12,  // The number of columns in your grid
+  gutters: 1/4, // The size of a gutter in relation to a single column
+);
+
+/* ==========================================================================
+   Grid items
+   ========================================================================== */
+
+/**
+ * Since we're using Susy here, it's not as imperative to have a grid "setup".
+ * However, this area should act as a variable repo for the grid.
+ **/
+
+.quarter { @include span(3); }
+.third { @include span(4); }
+.half { @include span(6); }
+
+
+/* Colors
+   ========================================================================== */
+
+$red:       red;
+$blue:      blue;
+$green:     green;
+
+$link:      $green;
+$hover:     $red;
+
+
+/* Typography styles
+   ========================================================================== */
+
+$font-size--base: 16px;
+$font-size--small: 12px;
+$font-size--large: 24px;
+
+$line-height--base: 1.5em;
+
+$h1-size: 48px;
+$h2-size: 36px;
+$h3-size: 24px;
+$h4-size: 18px;
+$h5-size: 14px;
+$h6-size: 12px;
+
+
+/* Responsive values
+   ========================================================================== */
+
+$breakpoints: (lap-small: 550px, lap: 768px, lap-large: 905px, desk-small: 960px, desk: 1024px, desk-wide: 1500px);
+
+

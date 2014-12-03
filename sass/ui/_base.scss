@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Base & Naked element styles
+   ========================================================================== */
+
+/**
+ * This file will hold the styles for base elements.
+ */
+
+body {
+  font-size: $font-size--base;
+  line-height: $line-height--base;
+}
+
+a {
+  color: $link;
+}
+
+a:hover {
+  color: $hover;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0 0 1.5em 0;
+}
+
+h1 {
+  font-size: $h1-size; // 48px
+  line-height: 1em; // 48px
+  margin: 0 0 1em 0; // 48px
+}
+
+h2 {
+  font-size: $h2-size; // 36px
+  line-height: 0.66666666666667em;
+  margin: 0 0 0.66666666666667em 0;
+}
+
+h3 {
+  font-size: $h3-size;
+  line-height: 1em;
+  margin: 0 0 1em 0;
+}
+
+h4 {
+  font-size: $h4-size; // 18px
+  line-height: 1.33333333333333em;
+  margin: 0 0 1.33333333333333em 0;
+}
+
+h5 { // smaller
+  font-size: $h5-size; // 14px;
+  line-height: 1.71428571428571em;
+  margin: 0 0 1.71428571428571em 0;
+}
+
+h6 { // way-smaller
+  font-size: $h6-size; // 12px
+  line-height: 2em;
+  margin: 0 0 1em 0;
+}
