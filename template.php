@@ -6,7 +6,6 @@
  * ref: http://drupal.org/node/887600
  */
 function zorg_preprocess_html(&$vars) {
-	// preprocess html variables
   $node = menu_get_object();
   if ($node && $node->nid && $node->nid == 316) {
     $smartforms = getcwd().base_path().path_to_theme().'/smartforms.inc';
@@ -29,7 +28,6 @@ function zorg_preprocess_html(&$vars) {
     $vars['rdf']->namespaces = '';
     $vars['rdf']->profile = '';
   }
-  
 
  // use the $html5shiv variable in their html.tpl.php
   $element = array(  
@@ -50,21 +48,23 @@ function zorg_preprocess_html(&$vars) {
 }
 
 /*
- * implements hook_preprocess_page()
+ * Implements hook_preprocess_page()
  */
 
 function zorg_preprocess_page(&$vars) {
-  // preprocess node variables
+  // Allows for page tpl's based on node-type
+  // ie: page__webform.tpl.php
   if($vars['theme_hook_suggestions'] && isset($vars['node'])) {
     $vars['theme_hook_suggestions'][] = 'page__'.$vars['node']->type;
   }
 }
 
 /**
- * implements hook_css_alter()
+ * Implements hook_css_alter()
  */
 
 function zorg_css_alter(&$css){
+  // Excludes the system's inherent menu stylings:
   $exclude = array(
     //'modules/system/system.css' => FALSE,
     //'modules/system/system.admin.css' => FALSE,
