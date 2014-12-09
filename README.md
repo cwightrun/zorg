@@ -14,6 +14,16 @@ All-in-all this is a basic way to keep up the starter theme I use for producing 
 
 There are no base grid sizes, as Susy is relative.
 
+I've kept the following templates *mostly* stock:
+ * `block.tpl.php`
+ * `page.tpl.php`
+ * `node.tpl.php`
+ * `html.tpl.php` - this has RDF integrations
+
+The template.php functions provide additional page.tpl naming structures for content types: `page__[content-type].tpl.php`
+
+For instance, to provide a page template specifically for webforms, `page__webform.tpl.php` would do the trick.
+
 ### Version
 0.0.1
 
