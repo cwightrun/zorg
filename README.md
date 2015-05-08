@@ -20,9 +20,9 @@ I've kept the following templates *mostly* stock:
  * `node.tpl.php`
  * `html.tpl.php` - this has RDF integrations
 
-The template.php functions provide additional page.tpl naming structures for content types: `page__[content-type].tpl.php`
+The template.php functions provide additional page.tpl naming structures for content types: `page--[content-type].tpl.php`
 
-For instance, to provide a page template specifically for webforms, `page__webform.tpl.php` would do the trick.
+For instance, to provide a page template specifically for webforms, `page--webform.tpl.php` would do the trick.
 
 ### Version
 0.0.1
@@ -33,7 +33,7 @@ Zorg uses a number of open source projects to work properly:
 
 * [SASS] - CSS with Superpowers
 * [Susy] - Power tools for the web
-* [Grunt] - The JavaScript Task Runner
+* [Gulp] - The speedy JavaScript Task Runner
 * [node.js] - Necessary for Sass/Susy
 * [jQuery] - duh
 
@@ -44,12 +44,12 @@ You need Grunt installed:
 ```sh
 $ git clone [git-repo-url] zorg
 $ cd zorg
-$ grunt
+$ gulp
 ```
 
 ### Todo
 
-* Convert from Grunt to [Gulp]
+* Lots
 
 ### Questions?
 
@@ -60,7 +60,6 @@ You can reach out to me at [@cwightrun] on Twitter.
 [Boron]:https://www.drupal.org/project/boron
 [Sass]:http://sass-lang.com/
 [Susy]:http://susy.oddbird.net/
-[Grunt]:http://gruntjs.com/
 [Gulp]:http://gulpjs.com/
 [node.js]:http://nodejs.org
 [jQuery]:http://jquery.com
