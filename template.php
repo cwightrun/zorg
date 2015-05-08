@@ -7,10 +7,6 @@
  */
 function zorg_preprocess_html(&$vars) {
   $node = menu_get_object();
-  if ($node && $node->nid && $node->nid == 316) {
-    $smartforms = getcwd().base_path().path_to_theme().'/smartforms.inc';
-    $vars['smartforms'] = $smartforms;
-  }
   
   // Ensure that the $vars['rdf'] variable is an object.
   if (!isset($vars['rdf']) || !is_object($vars['rdf'])) {
@@ -40,10 +36,9 @@ function zorg_preprocess_html(&$vars) {
    ),
  );
 
- $shimset = theme_get_setting('boron_shim');
  $script = theme('html_tag', $element);
  //If the theme setting for adding the html5shim is checked, set the variable.
- if ($shimset == 1) { $vars['html5shim'] = "\n<!--[if lt IE 9]>\n" . $script . "<![endif]-->\n"; }
+ $vars['html5shim'] = "\n<!--[if lt IE 9]>\n" . $script . "<![endif]-->\n";
 
 }
 
@@ -55,7 +50,7 @@ function zorg_preprocess_page(&$vars) {
   // Allows for page tpl's based on node-type
   // ie: page__webform.tpl.php
   if($vars['theme_hook_suggestions'] && isset($vars['node'])) {
-    $vars['theme_hook_suggestions'][] = 'page__'.$vars['node']->type;
+    $vars['theme_hook_suggestions'][] = 'page--'.$vars['node']->type;
   }
 }
 

@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Clearfix mixin
+   ========================================================================== */
+
+/**
+ * Include this mixin to clearfix a container
+ */
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}    

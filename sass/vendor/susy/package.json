@@ -1,0 +1,28 @@
+{
+  "name": "susy",
+  "version": "2.2.0",
+  "description": "Sass power-tools for web layout.",
+  "author": {
+    "name": "Eric M. Suzanne",
+    "email": "eric@oddbird.net"
+  },
+  "main": "sass/_susy.scss",
+  "keywords": [
+    "layout",
+    "grid",
+    "sass",
+    "responsive",
+    "rwd",
+    "semantic"
+  ],
+  "scripts": {
+    "test": "rake test"
+  },
+  "license": "BSD-3-Clause",
+  "readme": "Power Tools For The Web\n=======================\n\n[![Build Status](https://travis-ci.org/ericam/susy.png?branch=susy-next)](https://travis-ci.org/ericam/susy)\n\nSusy is an agnostic set of tools\nfor creating powerful, custom layouts.\nWe provide the language,\nbut you provide all the opinions.\nUse a grid, don't use a grid,\nor use a combination of grids —\nit's all up to you.\n\nWe didn't want to build another system,\nwe wanted to build power tools\nthat you could use in any system.\n\nYour markup, your layout | *our math*\n\nResources\n---------\n\n- [Website](http://susy.oddbird.net/)\n- [Documentation](http://susydocs.oddbird.net/)\n- [Sites using Susy](http://susy.oddbird.net/sites-using-susy/)\n- [Twitter @SassSusy](http://twitter.com/Sasssusy/)\n",
+  "readmeFilename": "README.md",
+  "_id": "susy@2.2.0",
+  "_shasum": "a74840407593a3c0dbe411dbc6b9b114ff0047bd",
+  "_resolved": "git://github.com/ericam/susy.git#646cb00bb74888b56f52e69060baaec6618e859c",
+  "_from": "susy@git://github.com/ericam/susy.git#libsass"
+}
