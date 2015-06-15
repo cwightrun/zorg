@@ -10,9 +10,9 @@ Zorg is a Drupal 7 starter theme borrowing structural elements from [Boron], usi
   - Susy is awesome
   - Therefore, Zorg is awesome
 
-All-in-all this is a basic way to keep up the starter theme I use for producing Drupal 7 based presentations from scratch.
+All-in-all this is a basic way to keep up the starter theme I use for producing Drupal 7 based presentation-layers from scratch.
 
-There are no base grid sizes, as Susy is relative.
+There are no base grid sizes, as Susy is relative, and all things are relative. Change comes from within. Pain is an illusion.
 
 I've kept the following templates *mostly* stock:
  * `block.tpl.php`
@@ -39,7 +39,7 @@ Zorg uses a number of open source projects to work properly:
 
 ### Installation & Usage
 
-You need Grunt installed:
+You need Gulp installed:
 
 ```sh
 $ git clone [git-repo-url] zorg
