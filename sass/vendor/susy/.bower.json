@@ -25,5 +25,16 @@
   ],
   "devDependencies": {
     "true": "2.0.0.alpha.3"
-  }
+  },
+  "version": "2.2.6",
+  "_release": "2.2.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.2.6",
+    "commit": "c987b96e275674e120072ac6ffc9cd600709943a"
+  },
+  "_source": "git://github.com/ericam/susy.git",
+  "_target": "~2.2.6",
+  "_originalSource": "susy",
+  "_direct": true
 }

@@ -1,13 +1,40 @@
 // Include Gulp
 var gulp = require('gulp'); 
  
-var imagemin = require('gulp-imagemin'),
-    minifyCSS = require('gulp-minify-css'),
-    prefix = require('gulp-autoprefixer'),
-    sass = require('gulp-sass'),
-    // sassdoc = require('sassdoc'), // Not Yet
-    sourcemaps = require('gulp-sourcemaps'),
-    watch = require('gulp-watch');
+var imagemin      = require('gulp-imagemin'),
+    minifyCSS     = require('gulp-minify-css'),
+    notify        = require('gulp-notify'),
+    plumber       = require('gulp-plumber'),
+    prefix        = require('gulp-autoprefixer'),
+    prefix        = require('gulp-autoprefixer'),
+    sass          = require('gulp-sass'),
+    sourcemaps    = require('gulp-sourcemaps'),
+    watch         = require('gulp-watch'),
+    util          = require('gulp-util');
+
+// onError func for when Plumber wigs-out
+var onError = function(err) {
+  notify.onError({
+    title:    "Gulp",
+    subtitle: "Failure!",
+    message:  "Error: <%= error.message %>",
+    sound:    "Beep"
+  })(err);
+  this.emit('end');
+};
+
+// Copy SASS/CSS libraries to initialize build system.
+// Only needs to be run once, or after an update to any Bower components.
+gulp.task('copy:sass', function() {
+  return gulp.src([
+      'bower_components/susy/**/*',
+      'bower_components/include-media/dist/*'
+    ], {
+      base: 'bower_components',
+      dot: true
+    })
+    .pipe(gulp.dest('sass/vendor'));
+});
 
 // Minify images
 gulp.task('imagemin', function() {
@@ -21,16 +48,26 @@ gulp.task('imagemin', function() {
 // Gulp Sass Task 
 gulp.task('sass', function() {
   gulp.src('sass/**/*.scss')
+    .pipe(plumber({ errorHandler: onError }))
     .pipe(sourcemaps.init()) // Initializes sourcemaps
-    // .pipe(sassdoc()) // Not yet
     .pipe(prefix('last 2 versions', '> 1%', 'ie 8'))
-    .pipe(sourcemaps.write()) // Writes sourcemaps into the CSS file
-    .pipe(minifyCSS({
-      // keepBreaks: true,
-      // keepSpecialComments: 0
-    }))
-    .pipe(gulp.dest('css'));
-})
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sourcemaps.write('./')) // Writes sourcemaps into the CSS file
+    .pipe(gulp.dest('./css'));
+});
+
+// // Gulp Sass Task 
+// gulp.task('sass', function() {
+//   gulp.src('sass/**/*.scss')
+//     .pipe(sourcemaps.init()) // Initializes sourcemaps
+//     .pipe(prefix('last 2 versions', '> 1%', 'ie 8'))
+//     .pipe(sourcemaps.write()) // Writes sourcemaps into the CSS file
+//     .pipe(minifyCSS({
+//       // keepBreaks: true,
+//       // keepSpecialComments: 0
+//     }))
+//     .pipe(gulp.dest('css'));
+// })
 
 gulp.task('watch', function() {
   gulp.watch('sass/**/*.scss', ['sass'])
